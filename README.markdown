@@ -14,27 +14,27 @@ and the light is calculated, it is rounded to one of several specific values
 to produce a "banded" shading effect. Specifically, the code is:
 
 
-     double bias = 0.2;
+	double bias = 0.2;
 
-      double alignment = (dot(light.direction, normal) + bias) / (1 + bias);
+	double alignment = (dot(light.direction, normal) + bias) / (1 + bias);
 
-      if (alignment > 0)
+	if (alignment > 0)
 
-      {
+      	{
 
-          // Make shading granular
+		// Make shading granular
 
-          if (alignment < 0.6) alignment = 0.4;
+		if (alignment < 0.6) alignment = 0.4;
 
-          else alignment = 0.8;
+          	else alignment = 0.8;
 
-          // Diffuse lighting
+		// Diffuse lighting
 
-          color = color + alignment * mat.diffuse * light.color;
+		color = color + alignment * mat.diffuse * light.color;
 
-          (snip specular lighting code here)
+		//(snip specular lighting code here)
 
-      }
+	}
 
 
   * After the image has been shaded, the black outlines are added. A pixel is
