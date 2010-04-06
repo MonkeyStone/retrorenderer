@@ -3,7 +3,7 @@ flags = -g -Wall
 
 test: RetroRenderer
 	./RetroRenderer models/wizard/wizard.obj 32 32 0.45 -o render.tga --pitch -30 --yaw 315 --cull front
-	open render.tga
+	# open render.tga
 
 RetroRenderer: $(objects)
 	g++ -o RetroRenderer $+ $(flags)
