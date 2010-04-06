@@ -1,6 +1,7 @@
 #include "Image.h"
 
 #include <math.h>
+#include <inttypes.h>
 
 
 
